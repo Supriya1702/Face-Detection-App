@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        //detect faces
+        //detect faces even more than one
         Frame frame = new Frame.Builder().setBitmap(myBitmap).build();
         SparseArray<Face> faces = faceDetector.detect(frame);
 
