@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showImage(FileDescriptor fileDescriptor) {
         //Load the Image
+        
         ImageView myImageView = findViewById(R.id.imgview);
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inMutable=true;
