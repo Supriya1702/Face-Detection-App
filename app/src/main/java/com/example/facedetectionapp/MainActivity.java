@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         options.inMutable=true;
 
         //create paint object to draw square
+        
         Bitmap myBitmap = BitmapFactory.decodeFileDescriptor(fileDescriptor);
         Paint myRectPaint = new Paint();
         myRectPaint.setStrokeWidth(5);
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         myRectPaint.setStyle(Paint.Style.STROKE);
 
         //create canvas to draw on
+        
         Bitmap tempBitmap = Bitmap.createBitmap(myBitmap.getWidth(), myBitmap.getHeight(), Bitmap.Config.RGB_565);
         Canvas tempCanvas = new Canvas(tempBitmap);
         tempCanvas.drawBitmap(myBitmap, 0, 0, null);
