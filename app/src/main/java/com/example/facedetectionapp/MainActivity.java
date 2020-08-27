@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         tempCanvas.drawBitmap(myBitmap, 0, 0, null);
 
         //create face detector
+        
         FaceDetector faceDetector = new
                 FaceDetector.Builder(getApplicationContext()).setTrackingEnabled(false)
                 .build();
@@ -109,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //detect faces even more than one
+        
         Frame frame = new Frame.Builder().setBitmap(myBitmap).build();
         SparseArray<Face> faces = faceDetector.detect(frame);
 
@@ -120,7 +122,9 @@ public class MainActivity extends AppCompatActivity {
             float y2 = y1 + thisFace.getHeight();
             tempCanvas.drawRoundRect(new RectF(x1, y1, x2, y2), 2, 2, myRectPaint);
         }
+        
         //setting image to Bitmap
+        
         myImageView.setImageDrawable(new BitmapDrawable(getResources(),tempBitmap));
     }
 }
